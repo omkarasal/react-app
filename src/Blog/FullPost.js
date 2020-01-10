@@ -9,7 +9,7 @@ class FullPost extends Component {
 
     componentDidMount(){
         if(this.props.match.params.id){
-            axios.get("https://jsonplaceholder.typicode.com/posts/" + this.props.match.params.id)
+            axios.get("/posts/" + this.props.match.params.id)
                 .then(response => {
                     this.setState({
                         post: response.data

@@ -1,9 +1,12 @@
 .post-section {
     margin: 50px 0;
+    display: block;
+    box-sizing: border-box;
+}
+.postList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 .post {
     flex: 0 0 48%;
