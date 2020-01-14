@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-import Login from '../Login/Login';
-import Home from '../Home/Home';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
-
 function Header(props) {
     
     function handleLogout(){

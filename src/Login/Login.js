@@ -18,18 +18,17 @@ class Login extends Component {
     }
 
     handleSubmit = (e) =>{
+        e.preventDefault();
         if(this.usernameRef.current.value === '' || this.passwordRef.current.value === ''){
             alert('Please enter username and password to login!');
             this.usernameRef.current.focus();
         }else if(this.usernameRef.current.value === this.state.username && this.passwordRef.current.value === this.state.password){
             localStorage.setItem('isLoggedIn', true);
             this.props.history.push('/home');
-            //console.log(this.props)
         }else{
             alert('Please enter valid credentials to login!');
             this.usernameRef.current.focus();
         }
-        e.preventDefault();
     }
 
     render(){
