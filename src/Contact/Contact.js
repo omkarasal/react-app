@@ -39,7 +39,8 @@ class Contact extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true
+                    required: true,
+                    email: true
                 },
                 valid: false,
                 touched: false
@@ -123,6 +124,11 @@ class Contact extends Component {
 
         if(rules.maxLength){
             isValid = value.length >= rules.maxLength && isValid;
+        }
+
+        if(rules.email){
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            isValid = (emailPattern.test(value)) && isValid;
         }
 
         return isValid;
